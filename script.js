@@ -23,14 +23,18 @@ function checkGuess() {
         lastResult.textContent = 'Congratulations! You got it right!';
         lastResult.style.backgroundColor = 'green';
         lowOrHi.textContent = '';
+        lastResult.style.boxShadow = '0.2rem 0.3rem 0.2rem;';
+
         setGameOver();
     } else if (guessCount === 10) {
         lastResult.textContent = '!!!GAME OVER!!!';
+        lastResult.style.boxShadow = '0.2rem 0.3rem 0.2rem;';
         lowOrHi.textContent = '';
         setGameOver();
     } else {
         lastResult.textContent = 'Wrong!';
         lastResult.style.backgroundColor = 'red';
+        lastResult.style.boxShadow = '0.2rem 0.3rem 0.2rem;';
         if (userGuess < randomNumber) {
             lowOrHi.textContent = 'Last guess was too low!';
         } else if (userGuess > randomNumber) {
